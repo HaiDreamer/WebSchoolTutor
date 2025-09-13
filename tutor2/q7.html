@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Question 7</title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <h1></h1>
+
+        <form>
+            <input id="field1" type="text" value="Field 1">
+            <input id="field2" type="text" value="Field 2">
+        </form>
+
+        <p id="textNotIn"></p>
+
+        <script>
+            let field1 = document.getElementById("field1");
+            let field2 = document.getElementById("field2");
+            field1.addEventListener("blur", function(){
+                document.getElementById("textNotIn").innerText = "Text not in!"
+            });
+            field2.addEventListener("blur", function(){
+                document.getElementById("textNotIn").innerText = "Ahh, text not in!"
+            });
+        </script>
+    </body>
+</html>

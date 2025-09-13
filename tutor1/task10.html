@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 10</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;  /*100% of the height of the viewpoint = full web screen*/
+        }
+        header, footer {
+            background-color: lightskyblue;
+            padding: 20px;
+            border: 2px solid blue;
+            border-collapse: collapse;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+        }
+        aside {
+            background-color: bisque;
+            padding: 20px;
+            width: 25%; /*25% width of its parent container -> main has 75% width*/
+            border-right: 2px solid blue;
+            border-collapse: collapse;
+        }
+        main {
+            background-color: lightgreen;
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <div class="content">
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>

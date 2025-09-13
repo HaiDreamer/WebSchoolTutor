@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Question 4</title>
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                background-color: rgb(55, 55, 104);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                margin: 0;
+            }
+
+            .login-box {
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+            }
+
+            .login-box h2 {
+                color: black;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .login-box .form-button {
+                position: relative;
+                grid-column: 2;
+            }
+
+            .login-box button:hover {
+                background-color: rgb(93, 93, 165);
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                max-width: 500px;
+                row-gap: 5px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="login-box">
+            <h2>Login</h2>
+            <form class="form-grid">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <label for="Double-check password">Re-enter password:</label>
+                <input type="password" id="confirm-password" placeholder="Re-enter password">
+                <div class="form-button">
+                    <button onclick="reset()">Reset</button>
+                    <button onclick="login()">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+        <script>
+            function login(){
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let confirm_pass = document.getElementById("confirm-password").value;
+
+                //need connect with database which have fully username and password, here it is only exercise
+                if (username === "" && password === ""){
+                    alert("Username or password must not be null.");
+                } else if (password != confirm_pass) {
+                    alert("Login failed! Check password again.");
+                } else {
+                    alert("Login successful");
+                }
+            } 
+            function reset(){
+                document.getElementById("username").value = "";
+                document.getElementsById("password").value = "";
+                document.getElementById("confirm-password").value = "";
+            }
+        </script>
+    </body>
+</html>

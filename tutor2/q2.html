@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Question 2</title>
+    </head>
+    <body>
+        <h1>Find largest of 5 numbers</h1>
+        <input type="number" id="number1" placeholder="Number1">
+        <input type="number" id="number2" placeholder="Number2">
+        <input type="number" id="number3" placeholder="Number3">
+        <input type="number" id="number4" placeholder="Number4">
+        <input type="number" id="number5" placeholder="Number5">
+        <button id="calMax">Max num...?</button>
+        <h2>Largest number</h2>
+        <h2 id="max"></h2>
+
+        <script>
+            function calMax(){
+                let ids = ["number1", "number2", "number3", "number4", "number5"];
+                let nums = ids.map(id => parseFloat(document.getElementById(id).value));
+                let max = nums[0];
+                for (let num of nums){
+                    if (num > max){
+                        max = num;
+                    }
+                }
+                document.getElementById("max").innerText = max;
+            }
+            document.getElementById("calMax").addEventListener("click", calMax);
+        </script>
+    </body>
+</html>

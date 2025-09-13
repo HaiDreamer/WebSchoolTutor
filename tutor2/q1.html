@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Question 1</title>
+    </head>
+    <body>
+        <h1>Transform Celsius to and form Fahrenheit</h1>
+
+        <h2>Celsius to Fahrenheit</h2>
+        <input type="number" id="Celsius" placeholder="Celsius">
+        <button id="calculateCtoF">Calculate</button>
+        <p id="CtoF"></p>
+
+        <h2>Fahrenheit to Celsius</h2>
+        <input type="number" id="Fahrenheit" placeholder="Fahrenheit">
+        <button id="calculateFtoC">Calculate</button>
+        <p id="FtoC"></p>
+
+        <script>
+            function CtoF(){
+                let C = parseFloat(document.getElementById("Celsius").value);
+                let F = (C * 9/5) + 32;
+                document.getElementById("CtoF").innerText = "Celsius to Fahrenheit: " + F.toFixed(2);
+            }
+            function FtoC(){
+                let F = document.getElementById("Fahrenheit").value;
+                let C = (F - 32)*5/9;
+                document.getElementById("FtoC").innerText = "Fah to Cel: " + C.toFixed(2);
+            }
+
+            document.getElementById("calculateCtoF").addEventListener("click", CtoF);
+            document.getElementById("calculateFtoC").addEventListener("click", FtoC);
+        </script>
+    </body>
+</html>

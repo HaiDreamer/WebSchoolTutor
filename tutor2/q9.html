@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Question 9</title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <h1>Time double-click</h1>
+        <br>
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <p>Paragraph</p>
+        <button id="btn">Button</button>
+        <div id="log"></div>
+
+        <script>
+            let clickTime = 0;
+
+            document.getElementById("btn").addEventListener("click", function() {
+                let now = Date.now();
+                if (clickTime !== 0){
+                    let dif = now - clickTime;
+                    document.getElementById("log").innerText = dif;
+                }
+                clickTime = now;
+            });
+            
+        </script>
+    </body>
+</html>

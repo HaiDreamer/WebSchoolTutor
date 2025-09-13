@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 9</title>
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding-top: 1px;
+                padding-bottom: 1px;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            th, td {
+                width: 150px;
+                height: 30px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .subject-col {
+                width: 300px;
+            }
+            tr:nth-child(odd) {
+                background-color: rgb(173, 201, 211);
+            }
+            tr:nth-child(even) {
+                background-color: rgb(84, 117, 145);
+            }
+            tr:first-child {
+                background-color: blue;
+                color: black;
+            }
+            tr:hover {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <table border=1>
+            <tr>
+                <th class="subject-col">Subject</th>
+                <th>ECTS</th>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </body>
+</html>

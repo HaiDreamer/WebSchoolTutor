@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--U can add your own thumbnail images for what category as u want-->
+<!--ctrl A and ctrl k + F for re-format-->
+<html lang="en">
+
+<head>
+    <title>Task 11</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header,
+        footer {
+            background-color: lightskyblue;
+            padding: 20px;
+            border: 10px solid white;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+        }
+
+        aside {
+            background-color: bisque;
+            padding: 20px;
+            width: 20%;
+            border-right: 10px solid white;
+            border-collapse: collapse;
+        }
+
+        aside button {
+            background-color: rgb(20, 77, 20);
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 20px;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        main {
+            background-color: lightgreen;
+            flex: 1;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        main .thumbnail {
+            width: 100%;
+        }
+
+        main .grid {
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 columns → 2 rows = 8 cells */
+            gap: 10px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        main .grid img {
+            border: 3px solid black;
+        }
+
+        main .grid img:hover {
+            transform: scale(1.2);
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Banner</header>
+    <div class="content">
+        <aside>
+            <button onclick="BowImages()">Bow Use</button>
+            <button onclick="Grounded2()">Grounded 2</button>
+            <button onclick="Scorpion()">Scorpion</button>
+            <button onclick="showAbout()">About</button>
+        </aside>
+        <main>
+            <div class="grid" id="bowGrid">
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 1">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 2">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 3">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 4">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 5">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 6">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 7">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img3.jpg" target="_blank">
+                        <img src="images/img3.jpg" alt="Image 8">
+                    </a>
+                </div>
+            </div>
+            <div class="grid" id="Grounded2Grid">
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 1">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 2">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 3">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 4">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 5">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 6">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 7">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img2.jpg" target="_blank">
+                        <img src="images/img2.jpg" alt="Image 8">
+                    </a>
+                </div>
+            </div>
+            <div class="grid" id="ScorpionGrid">
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 1">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 2">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 3">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 4">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 5">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 6">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 7">
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="images/img1.jpg" target="_blank">
+                        <img src="images/img1.jpg" alt="Image 8">
+                    </a>
+                </div>
+            </div>
+            <p id="aboutMessage" hidden>This is my product</p>
+        </main>
+    </div>
+    <footer>Copyright</footer>
+    <script>
+        const bow = document.getElementById("bowGrid");
+        const grounded2 = document.getElementById("Grounded2Grid");
+        const scorpion = document.getElementById("ScorpionGrid")
+        const msg = document.getElementById("aboutMessage");
+
+        function hide() {
+            bow.style.display = "none";
+            grounded2.style.display = "none";
+            scorpion.style.display = "none";
+            msg.hidden = true;
+        }
+        function BowImages() {
+            hide();
+            bow.style.display = 'grid';
+        }
+        function Grounded2() {
+            hide();
+            grounded2.style.display = 'grid';
+        }
+        function Scorpion() {
+            hide();
+            scorpion.style.display = 'grid';
+        }
+        function showAbout() {
+            hide();
+            msg.hidden = false;
+        }
+    </script>
+</body>
+
+</html>
